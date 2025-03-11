@@ -18,10 +18,10 @@ class TProductMetaData extends StatelessWidget {
   final ProductModel product;
   @override
   Widget build(BuildContext context) {
-
     final controller = ProductController.instance;
 
-    final salePercentage =  controller.calculateSalePercentage(product.price, product.salePrice);
+    final salePercentage =
+        controller.calculateSalePercentage(product.price, product.salePrice);
     final dark = THelperFunctions.isDarkMode(context);
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -29,61 +29,82 @@ class TProductMetaData extends StatelessWidget {
         ///Price and Sale price
         Row(
           children: [
-            if(salePercentage!=null)
-            TRoundedContainer(
-              radius: TSizes.sm,
-              backgroundColor: TColors.secondary.withOpacity(0.8),
-              padding:  EdgeInsets.symmetric(
-                  horizontal: TSizes.sm, vertical: TSizes.xs),
-              child: Text(
-               '$salePercentage%',
-                style: Theme.of(context)
-                    .textTheme
-                    .labelLarge!
-                    .apply(color: TColors.black),
+            if (salePercentage != null)
+              TRoundedContainer(
+                radius: TSizes.sm,
+                backgroundColor: TColors.secondary.withOpacity(0.8),
+                padding: const EdgeInsets.symmetric(
+                    horizontal: TSizes.sm, vertical: TSizes.xs),
+                child: Text(
+                  '$salePercentage%',
+                  style: Theme.of(context)
+                      .textTheme
+                      .labelLarge!
+                      .apply(color: TColors.black),
+                ),
               ),
-            ),
-            if(salePercentage!=null)
-            SizedBox(width: TSizes.spaceBtwItems,),
+            if (salePercentage != null)
+              const SizedBox(
+                width: TSizes.spaceBtwItems,
+              ),
 
             ///Strike Price (MRP)
-            if (product.productType == ProductType.single.toString() && product.salePrice > 0)
-             Text('₹${product.price}',style: Theme.of(context).textTheme.titleSmall?.apply(decoration: TextDecoration.lineThrough),),
-            if (product.productType == ProductType.single.toString() && product.salePrice > 0) SizedBox(width: TSizes.spaceBtwItems,),
-            ///Price
-            TProductPriceText(price: controller.getProductPrice(product),islarge:true),
+            if (product.productType == ProductType.single.toString() &&
+                product.salePrice > 0)
+              Text(
+                '₹${product.price}',
+                style: Theme.of(context)
+                    .textTheme
+                    .titleSmall
+                    ?.apply(decoration: TextDecoration.lineThrough),
+              ),
+            if (product.productType == ProductType.single.toString() &&
+                product.salePrice > 0)
+              const SizedBox(
+                width: TSizes.spaceBtwItems,
+              ),
 
+            ///Price
+            TProductPriceText(
+                price: controller.getProductPrice(product), islarge: true),
           ],
         ),
-        SizedBox(height: TSizes.spaceBtwItems/1.5,),
+        const SizedBox(height: TSizes.spaceBtwItems / 1.5),
+
         ///Title
         TProductTitleText(title: product.title),
-        SizedBox(height: TSizes.spaceBtwItems/1.5,),
+        const SizedBox(height: TSizes.spaceBtwItems / 1.5),
 
         ///Stock status
         Row(
           children: [
-            TProductTitleText(title: 'status'),
-            SizedBox(width: TSizes.spaceBtwItems),
-
-            Text(controller.getProductStockStatus(product.stock),style: Theme.of(context).textTheme.titleMedium,)
+            const TProductTitleText(title: 'status'),
+            const SizedBox(width: TSizes.spaceBtwItems),
+            Text(
+              controller.getProductStockStatus(product.stock),
+              style: Theme.of(context).textTheme.titleMedium,
+            )
           ],
         ),
-        const SizedBox(height: TSizes.spaceBtwItems/1.5),
-        
+        const SizedBox(height: TSizes.spaceBtwItems / 1.5),
+
         ///Brant Title
         Row(
           children: [
             TCircularImage(
-              image:product.brand!= null? product.brand!.image:'',isNetworkImage: false,
+              image: product.brand != null ? product.brand!.image : '',
+              isNetworkImage: false,
               width: 52,
               height: 52,
-              overlayColor: dark?TColors.white:TColors.black,),
-              TBrandTitleWithVerifyIcon(title: product.brand!= null? product.brand!.name:'',brandTextSizes: TextSizes.medium,),
+              overlayColor: dark ? TColors.white : TColors.black,
+            ),
+            TBrandTitleWithVerifyIcon(
+              title: product.brand != null ? product.brand!.name : '',
+              brandTextSizes: TextSizes.medium,
+            ),
           ],
         )
-
-        ],
+      ],
     );
   }
 }
