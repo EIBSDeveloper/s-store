@@ -37,78 +37,77 @@ class TDummyData {
         active: false),
   ];
 
-  // static final List<BrandModel> brands = [
-  //   BrandModel(
-  //       id: '1',
-  //       image: TImages.nikeLogo,
-  //       name: 'Nike',
-  //       productsCount: 265,
-  //       isFeatured: true),
-  //
-  //   BrandModel(
-  //       id: '2',
-  //       image: TImages.adidasLogo,
-  //       name: 'Adidas',
-  //       productsCount: 95,
-  //       isFeatured: true),
-  //   BrandModel(
-  //       id: '8',
-  //       image: TImages.kenwoodLogo,
-  //       name: 'Kenwood',
-  //       productsCount: 36,
-  //       isFeatured: false),
-  //   BrandModel(
-  //       id: '9',
-  //       image: TImages.ikeaLogo,
-  //       name: 'IKEA',
-  //       productsCount: 36,
-  //       isFeatured: false),
-  //   BrandModel(
-  //       id: '5',
-  //       image: TImages.appleLogo,
-  //       name: 'Apple',
-  //       productsCount: 16,
-  //       isFeatured: true),
-  //   BrandModel(
-  //       id: '10',
-  //       image: TImages.acerlogo,
-  //       name: 'Acer',
-  //       productsCount: 36,
-  //       isFeatured: false),
-  //   BrandModel(
-  //       id: '3',
-  //       image: TImages.jordanLogo,
-  //       name: 'Jordan',
-  //       productsCount: 36,
-  //       isFeatured: true),
-  //   BrandModel(
-  //       id: '4',
-  //       image: TImages.pumaLogo,
-  //       name: 'Puma',
-  //       productsCount: 65,
-  //       isFeatured: true),
-  //   BrandModel(
-  //       id: '6',
-  //       image: TImages.zaraLogo,
-  //       name: 'ZARA',
-  //       productsCount: 36,
-  //       isFeatured: true),
-  //   BrandModel(
-  //       id: '7',
-  //       image: TImages.electronicsIcon,
-  //       name: 'Samsung',
-  //       productsCount: 36,
-  //       isFeatured: false),
-  // ];
   static final List<BrandModel> brands = [
     BrandModel(
-        id: '1183',
+        id: '1',
         image: TImages.nikeLogo,
-        name:
-            'https://firebasestorage.googleapis.com/v0/b/new-church-77e88.appspot.com/o/t-store-panel.zip?alt=media&token=c02d66ba-74cf-4ecc-9091-daf605bb1d86',
+        name: 'Nike',
         productsCount: 265,
+        isFeatured: true),
+    BrandModel(
+        id: '2',
+        image: TImages.adidasLogo,
+        name: 'Adidas',
+        productsCount: 95,
+        isFeatured: true),
+    BrandModel(
+        id: '8',
+        image: TImages.kenwoodLogo,
+        name: 'Kenwood',
+        productsCount: 36,
+        isFeatured: false),
+    BrandModel(
+        id: '9',
+        image: TImages.ikeaLogo,
+        name: 'IKEA',
+        productsCount: 36,
+        isFeatured: false),
+    BrandModel(
+        id: '5',
+        image: TImages.appleLogo,
+        name: 'Apple',
+        productsCount: 16,
+        isFeatured: true),
+    BrandModel(
+        id: '10',
+        image: TImages.acerlogo,
+        name: 'Acer',
+        productsCount: 36,
+        isFeatured: false),
+    BrandModel(
+        id: '3',
+        image: TImages.jordanLogo,
+        name: 'Jordan',
+        productsCount: 36,
+        isFeatured: true),
+    BrandModel(
+        id: '4',
+        image: TImages.pumaLogo,
+        name: 'Puma',
+        productsCount: 65,
+        isFeatured: true),
+    BrandModel(
+        id: '6',
+        image: TImages.zaraLogo,
+        name: 'ZARA',
+        productsCount: 36,
+        isFeatured: true),
+    BrandModel(
+        id: '7',
+        image: TImages.electronicsIcon,
+        name: 'Samsung',
+        productsCount: 36,
         isFeatured: false),
   ];
+  // static final List<BrandModel> brands = [
+  //   BrandModel(
+  //       id: '1183',
+  //       image: TImages.nikeLogo,
+  //       name:
+  //           'https://firebasestorage.googleapis.com/v0/b/new-church-77e88.appspot.com/o/t-store-panel.zip?alt=media&token=c02d66ba-74cf-4ecc-9091-daf605bb1d86',
+  //       productsCount: 265,
+  //       isFeatured: false),
+  // ];
 
   /// Upload  dummy Product
   static final List<ProductModel> product = [

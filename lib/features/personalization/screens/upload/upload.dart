@@ -5,6 +5,7 @@ import 'package:t_store/data/repositories/brands/brand_repository.dart';
 import 'package:t_store/data/repositories/categories/category_repository.dart';
 import 'package:t_store/data/repositories/product/product_repository.dart';
 import 'package:t_store/utils/constants/sizes.dart';
+import 'package:t_store/utils/snackbars/loaders.dart';
 
 import '../../../../common/widget/app_bar/appbar.dart';
 import '../../../../common/widget/list_tile/setting_menu_tile.dart';
@@ -38,7 +39,9 @@ class UploadProducts extends StatelessWidget {
                 title: 'Upload Categories',
                 subtitle: '',
                 ontap: () {
-                  CategoryRepository().uploadDummyCategoriesData(TDummyData.categories);
+                  TLoaders.successSnackBar(title: "Categories Start Uploading");
+                  CategoryRepository()
+                      .uploadDummyCategoriesData(TDummyData.categories);
                 },
               ),
               TSettingMenuTile(
@@ -46,6 +49,7 @@ class UploadProducts extends StatelessWidget {
                 title: 'Upload Brands',
                 subtitle: '',
                 ontap: () {
+                  TLoaders.successSnackBar(title: "Brands Start Uploading");
                   BrandRepository().uploadDummyBrandData(TDummyData.brands);
                 },
               ),
@@ -54,8 +58,9 @@ class UploadProducts extends StatelessWidget {
                 title: 'Upload Product',
                 subtitle: '',
                 ontap: () {
-
-                  ProductRepository().uploadDummyProductData(TDummyData.product);
+                  TLoaders.successSnackBar(title: "Product Start Uploading");
+                  ProductRepository()
+                      .uploadDummyProductData(TDummyData.product);
                 },
               ),
               TSettingMenuTile(
@@ -63,16 +68,19 @@ class UploadProducts extends StatelessWidget {
                 title: 'Upload Banners',
                 subtitle: '',
                 ontap: () {
+                  TLoaders.successSnackBar(title: "Banners Start Uploading");
                   BannerRepository().uploadDummyBannerData(TDummyData.banners);
                 },
               ),
-
               TSettingMenuTile(
                 icon: Iconsax.link_square5,
                 title: 'Upload Brand Category',
                 subtitle: '',
                 ontap: () {
-                  CategoryRepository().uploadDummyBrandCategory(TDummyData.brandCategories);
+                  TLoaders.successSnackBar(
+                      title: "Brand Category Start Uploading");
+                  CategoryRepository()
+                      .uploadDummyBrandCategory(TDummyData.brandCategories);
                 },
               ),
               TSettingMenuTile(
@@ -80,7 +88,10 @@ class UploadProducts extends StatelessWidget {
                 title: 'Upload Product Category',
                 subtitle: '',
                 ontap: () {
-                  CategoryRepository().uploadDummyProductCategory(TDummyData.productCategories);
+                  TLoaders.successSnackBar(
+                      title: " Product Category Start Uploading");
+                  CategoryRepository()
+                      .uploadDummyProductCategory(TDummyData.productCategories);
                 },
               ),
             ],
