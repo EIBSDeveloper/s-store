@@ -28,6 +28,7 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`. 
 # https://chatgpt.com/share/693d5a0f-5510-800d-ad55-c25e84812052
+# https://itackerui.elysiumproduct.com/client/manage_client
 dependencies:
   flutter:
     sdk: flutter
