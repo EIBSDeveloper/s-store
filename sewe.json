@@ -1,7 +1,0 @@
-{
-  "messages": [
-    { "role": "system", "content": "You are a coding assistant." },
-    { "role": "user", "content": "Write Python hello world" },
-    { "role": "assistant", "content": "print('Hello World')" }
-  ]
-}
