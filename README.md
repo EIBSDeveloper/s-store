@@ -5,7 +5,7 @@ Referal Link -- https://github.com/NgocHai73/store
 ## Getting Started
 [Referral Link](https://github.com/NgocHai73/store)
 
-This project is a starting point for a Flutter application.
+This project is a starting pohttps://drive.google.com/file/d/1wLSImTKndEUkii02LqN0IOQDdPnGusaO/view?usp=sharingint for a Flutter application.
 
 A few resources to get you started if this is your first Flutter project:
 
